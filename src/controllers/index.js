@@ -1,0 +1,1 @@
+module.exports.videoController = require('./video/video.controller')

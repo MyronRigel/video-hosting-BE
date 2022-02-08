@@ -1,0 +1,1 @@
+module.exports.videoRouter = require('./video/video.router')

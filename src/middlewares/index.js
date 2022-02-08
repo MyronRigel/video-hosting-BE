@@ -1,0 +1,1 @@
+module.exports.videoMiddleware = require('./video/video.middleware')
