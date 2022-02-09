@@ -23,17 +23,15 @@ app.use('/api', router)
 
 app.listen(PORT, err => err ? console.log(err) : console.log(`server listen port ${PORT}`))
 
-
-app.use('*', (err, req, res ,next) => {
-    res.status(err.status || 500).json({
-        message: err.message
-    })
+app.use('*', (err, req, res, next) => {
+  res.status(err.status || 500).json({
+    message: err.message,
+  })
 })
 
 process.on('unhandledRejection', reason => {
-    console.log(reason)
-    process.exit(0)
+  console.log(reason)
+  process.exit(0)
 })
 
-// for testing
 module.exports = app
